@@ -1,10 +1,13 @@
 
+import java.nio.file.FileSystem;
+import java.nio.file.Path;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.nio.file.*;
 
 
 public class Calculator {
-    
+     
 
     public static void main(String[] args){
 
@@ -21,12 +24,12 @@ public class Calculator {
             return;
         }
         
-        extracted(scanner, input1, input2);
+        chooseOperation(scanner, input1, input2);
     }
 
-    private static void extracted(Scanner scanner, double input1, double input2) {
+    private static void chooseOperation(Scanner scanner, double input1, double input2) {
         System.out.println("+ - * /");
-        var operation = scanner.next();
+        String operation = scanner.nextLine();
 
         double result;
         switch(operation){
@@ -53,6 +56,8 @@ public class Calculator {
         System.out.println(prompt);
         return scanner.nextDouble(); 
     }
+
+    // okay google let's push this coding to github
 
 
 }

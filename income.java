@@ -1,5 +1,10 @@
 public class income {
 
+    private String type;
+    private String size;
+    private double price;
+    private double quantity;
+
     public static double caluculateHourlyIncome(double hour, double salary){
 
         if (salary < 1){
@@ -19,11 +24,6 @@ public class income {
         double nonework = caluculateSickDay(6, myincome);
         System.out.println(myincome - nonework);
 
-
-
-
-
-
-
     }
 }
+
