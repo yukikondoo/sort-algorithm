@@ -39,7 +39,7 @@ public class MergeSort {
 
         int [] temp = new int[end - start]; // 7-0
         while (i < mid && j < end){
-            temp[tempIndex++] = input[i] <= input[j] ? input[i++]: input[j++]; //temp[0] = 20 <= 7 therefore, input[0] = 
+            temp[tempIndex++] = input[i] >= input[j] ? input[i++]: input[j++]; //temp[0] = 20 <= 7 therefore, input[0] = 
         }
         System.arraycopy(input, i, input, start + tempIndex, mid - i);  //{Source Array, left over element from the left, destination, the number of element we didnt copy}
         System.arraycopy(temp, 0, input, start, tempIndex); //{}
